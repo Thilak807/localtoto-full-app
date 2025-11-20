@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local ToTo E-Rickshaw Booking Platform</title>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="preconnect" href="https://www.unpkg.com" crossorigin>
+    <link rel="dns-prefetch" href="https://www.unpkg.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://api.olamaps.io" crossorigin>
+    <link rel="dns-prefetch" href="https://api.olamaps.io">
+    <style>
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+          'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+          sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      #root {
+        min-height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- Ola Web SDK per official docs (unpkg UMD build) -->
+    <script defer src="https://www.unpkg.com/olamaps-web-sdk@latest/dist/olamaps-web-sdk.umd.js" onerror="(function(){
+      console.error('Failed to load Ola Web SDK from unpkg, trying jsDelivr fallback');
+      var s=document.createElement('script');
+      s.defer=true;
+      s.src='https://cdn.jsdelivr.net/npm/olamaps-web-sdk@latest/dist/olamaps-web-sdk.umd.js';
+      s.onerror=function(){console.error('Failed to load Ola Web SDK from jsDelivr');};
+      document.head.appendChild(s);
+    })();"></script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
